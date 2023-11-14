@@ -2,26 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montagu+Slab:opsz,wght@16..144,500&family=Oleo+Script&family=Poppins:wght@100;400&family=Roboto&display=swap');
+body{
+  width: 95%;
+  margin: 0 auto;
+  background-color: #814dfa;
+  /* background-color: #fac62a; */
+  /* background-color: #faf9f7; */
+  
+}                                         
+#correctAnswer{
+  background-color: green;
+  color: white;
+}
+#wrongAnwser{
+  background-color: red;
+  color: black;
+  border: 2px solid black;
+}
+#smallTimmy{
+  color: red;
+  animation: flash 1s alternate infinite;
+}
+#warning{
+  color: #fac62a;
+  animation: flash 1s alternate infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@keyframes flash {
+  from{
+    opacity: 0;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  to{
+    opacity: 1;
+  }
 }
